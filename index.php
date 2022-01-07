@@ -50,6 +50,8 @@
     
         if(strlen($message) == 0){
             $messageError = "Message Field Is Required";   
+            $success = "<p class = 'alert alert-success'>Message send Successfully</p>";
+            $name = $email = $phone = $message = '';
 
         }
 
@@ -59,7 +61,10 @@
     $headers = 'From: ' . $email . '\r\n';
 
     if(empty($nameError) && empty($messageError) && empty($emailError) && empty($phoneError)){
-        mail('screamkaci1@gmail.com','Contact Form',$message , $headers);
+        mail('kacioussama0@gmail.com','Contact Form',$message , $headers);
+
+
+        
     }
 
 
@@ -85,6 +90,11 @@
 
         <h1 class = "display-1 text-center pt-4" >Contact Form</h1>
         
+        <?php 
+            if(isset($success))
+                echo $success;
+        
+        ?>
     
 
     <form action="<?php $_SERVER['PHP_SELF']?>" method = "POST">

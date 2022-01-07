@@ -1,0 +1,36 @@
+form {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+input {
+    padding-right: 30px !important;
+}
+
+
+
+div {
+    position: relative;
+    z-index: 0;
+
+}
+
+span.icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+
+div.send-icon span  {
+    left: 15px;
+    color: #fff !important;
+    z-index: -1;
+}
+
+button {
+    width: 100%;
+}
